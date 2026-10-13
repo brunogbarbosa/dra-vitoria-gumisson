@@ -55,11 +55,15 @@
 .viewer-range input { min-height: 44px; }
 .result-dialog::backdrop { background: var(--dark); }
 .closing-chapter { background: radial-gradient(circle at 80% 20%, var(--ink), var(--dark) 58%); }
-@media (min-width: 851px) {
+/* Apply the hero transition at every width above the mobile composition.
+   Navigation switches at 850px; the photograph switches at 700px. */
+@media (min-width: 701px) {
   .campaign-portrait { inset: 0 0 0 32%; }
   .campaign-original { object-fit: cover; object-position: center 0%; }
   .campaign::before { background: linear-gradient(90deg, var(--dark) 0%, var(--dark) 34%, color-mix(in srgb, var(--dark) 98%, transparent) 38%, color-mix(in srgb, var(--dark) 88%, transparent) 44%, color-mix(in srgb, var(--dark) 60%, transparent) 49%, color-mix(in srgb, var(--dark) 23%, transparent) 56%, transparent 65%); }
   .campaign-editorial { display: none; }
+}
+@media (min-width: 851px) {
   .essence-smile { border-radius: 0; top: 40px; right: 0; height: calc(100% - 40px); width: 48%; aspect-ratio: auto; }
   .essence-smile img { object-fit: contain; object-position: center top; }
 }

@@ -2,6 +2,8 @@
 
 Verificação realizada no build de produção, em Chrome, nos tamanhos 1440 × 900, 1920 × 1080 e 390 × 844.
 
+Após a correção da emenda e do escurecimento do hero na prévia intermediária, também foram conferidas as larguras 701, 773, 850, 851 e 1100 px. A transição clara da fotografia agora se aplica a todas as larguras acima de 700 px, independentemente do ponto em que a navegação muda para o menu compacto. A composição até 700 px foi preservada.
+
 - Revisão visual do hero, essência, apresentação, galeria, experiência, Instagram e agendamento.
 - Navegação totalmente transparente: sem background, imagem de fundo, borda, sombra ou backdrop-filter. Hero e fotografia começam na coordenada vertical zero; a navegação fica na camada superior.
 - Desktop mantém a transição ampla para a fotografia. Mobile usa a sua própria composição.
