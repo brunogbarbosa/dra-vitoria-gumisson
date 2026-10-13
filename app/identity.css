@@ -47,9 +47,20 @@
 .gallery-item button:hover img { transform: none; }
 .gallery-top { border-color: color-mix(in srgb, var(--champagne) 30%, transparent); }
 .gallery-top > span { color: var(--champagne); }
-.comparison { max-width: 100%; width: auto; }
-.comparison.vertical { width: auto; height: 100%; aspect-ratio: auto; }
-.vertical .compare-half { background-size: 100% var(--split-size); }
+/* Size both axes from the available viewer area. Capping only the width
+   while retaining height:100% distorts the photograph on narrow screens. */
+.viewer-stage { container-type: size; }
+.result-dialog .viewer-stage.viewer-stage-comparison {
+  height: min(calc(100dvh - 300px), calc(90vw / var(--comparison-ratio)));
+}
+.viewer-stage .comparison, .viewer-stage .comparison.vertical {
+  width: min(100cqw, calc(100cqh * var(--comparison-ratio)));
+  height: auto;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: var(--comparison-ratio);
+  flex: none;
+}
 .vertical .before { background-position: center top; }
 .vertical .after { background-position: center bottom; }
 .viewer-range input { min-height: 44px; }

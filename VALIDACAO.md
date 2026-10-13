@@ -6,6 +6,8 @@ Após a correção da emenda e do escurecimento do hero na prévia intermediári
 
 Na atualização do enquadramento, o hero desktop foi revisto em 1440 × 900 e 1920 × 900: a fotografia acompanha a altura do hero e mostra cabeça, torso e cintura, com a borda esquerda suavizada. As regras novas se aplicam somente a partir de 851 px; a composição mobile foi conferida novamente em 390 × 844. A imagem OG otimizada responde com HTTP 200 e `image/jpeg`; os metadados informam 1200 × 675 px e incluem descrição alternativa.
 
+O comparador foi corrigido para dimensionar largura e altura em conjunto, sem esticar a fotografia. A proporção efetivamente desenhada do fundo foi medida e comparada às dimensões dos arquivos originais em Chrome/Chromium e WebKit. Os quatro comparativos passaram em 375 × 812, 390 × 844, 430 × 932, 844 × 390, 773 × 880, 1440 × 900 e 1920 × 900, totalizando 56 verificações de proporção. Também foram conferidos os extremos e o centro do controle deslizante, retorno à imagem original, fechamento e ausência de comparação nos dois registros únicos. Os controles permanecem próximos da imagem.
+
 - Revisão visual do hero, essência, apresentação, galeria, experiência, Instagram e agendamento.
 - Navegação totalmente transparente: sem background, imagem de fundo, borda, sombra ou backdrop-filter. Hero e fotografia começam na coordenada vertical zero; a navegação fica na camada superior.
 - Desktop mantém a transição ampla para a fotografia. Mobile usa a sua própria composição.
