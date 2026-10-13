@@ -64,6 +64,11 @@
   .campaign-editorial { display: none; }
 }
 @media (min-width: 851px) {
+  /* Fit the portrait's original proportions to the hero height on desktop,
+     instead of enlarging it to fill a wide landscape container. */
+  .campaign-portrait { inset: 0 0 0 auto; width: min(55%, calc(clamp(740px, 100svh, 1100px) * .8002853)); }
+  .campaign-silhouette { mask-image: linear-gradient(90deg, transparent, black 24%); }
+  .campaign-original { object-fit: cover; object-position: center top; }
   .essence-smile { border-radius: 0; top: 40px; right: 0; height: calc(100% - 40px); width: 48%; aspect-ratio: auto; }
   .essence-smile img { object-fit: contain; object-position: center top; }
 }
